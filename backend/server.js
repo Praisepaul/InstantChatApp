@@ -5,7 +5,7 @@ import connectToMongoDB from './db/connectDB.js'
 
 import authRoutes from "./routes/authRoutes.js";
 import messageRoutes from "./routes/messageRoutes.js";
-import messageRoutes from "./routes/userRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
