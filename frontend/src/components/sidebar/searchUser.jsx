@@ -5,7 +5,7 @@ import useGetConversations from '../../hooks/useGetConversations';
 import toast from 'react-hot-toast';
 
 const SearchUser = () => {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const {setSelectedConversation} = useConversation();
   const { conversations } = useGetConversations();
   const handleSubmit = (e) => {
@@ -13,7 +13,7 @@ const SearchUser = () => {
     if(!search) return;
 
     if(search.length < 3){
-      toast.error('Please enter atleast 3 letters');
+      return toast.error('Please enter atleast 3 letters');
     }
     const user = conversations.find((c) => c.fullName.toLowerCase().includes(search.toLowerCase()));
 
